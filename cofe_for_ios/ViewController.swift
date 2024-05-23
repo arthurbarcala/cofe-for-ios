@@ -73,6 +73,13 @@ class ViewController: UIViewController {
         setupView()
         setupConstraints()
         
+        loginButton.addTarget(self, action: #selector(loginButtonClicked), for: .touchUpInside)
+    }
+    
+    @objc func loginButtonClicked() {
+        let alert = UIAlertController(title: "Atenção", message: "O Cofe ainda está em desenvolvimento! Essa feature ainda não está disponível.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
